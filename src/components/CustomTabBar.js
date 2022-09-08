@@ -3,11 +3,11 @@ import styled from 'styled-components/native';
 
 import {UserContext} from '../contexts/UserContext';
 
-import HomeIcon from '../assets/home.svg';
-import SearchIcon from '../assets/search.svg';
-import TodayIcon from '../assets/today.svg';
-import FavoriteIcon from '../assets/favorite.svg';
-import AccountIcon from '../assets/account.svg';
+import HomeIcon from '../assets/homeIcon';
+import SearchIcon from '../assets/searchIcon';
+import TodayIcon from '../assets/todayIcons';
+import FavoriteIcon from '../assets/favoriteIcon';
+import AccountIcon from '../assets/AccountIcon';
 
 const TabArea = styled.View`
   height: 60px;
@@ -45,34 +45,34 @@ export default function CustomTabBar({state, navigation}) {
   return (
     <TabArea>
       <TabItem onPress={() => goTo('Home')}>
-        {/* <HomeIcon
+        <HomeIcon
           style={{opacity: state.index === 0 ? 1 : 0.5}}
           width="24"
           height="24"
           fill="#FFFFFF"
-        /> */}
+        />
       </TabItem>
       <TabItem onPress={() => goTo('Search')}>
-        {/* <SearchIcon
+        <SearchIcon
           style={{opacity: state.index === 1 ? 1 : 0.5}}
           width="24"
           height="24"
           fill="#FFFFFF"
-        /> */}
+        />
       </TabItem>
       <TabItemCenter onPress={() => goTo('Appointments')}>
-       {/*  <TodayIcon width="32" height="32" fill="#4EADBE" /> */}
+        <TodayIcon width="32" height="32" fill="#4EADBE" />
       </TabItemCenter>
       <TabItem onPress={() => goTo('Favorites')}>
-        {/* <FavoriteIcon
+        <FavoriteIcon
           style={{opacity: state.index === 3 ? 1 : 0.5}}
           width="24"
           height="24"
           fill="#FFFFFF"
-        /> */}
+        />
       </TabItem>
-      {/* <TabItem onPress={() => goTo('Profile')}>
-        {user.avatar != '' ? (
+      <TabItem onPress={() => goTo('Profile')}>
+        {user.avatar !== '' ? (
           <AvatarIcon source={{uri: user.avatar}} />
         ) : (
           <AccountIcon
@@ -82,7 +82,7 @@ export default function CustomTabBar({state, navigation}) {
             fill="#FFFFFF"
           />
         )}
-      </TabItem> */}
+      </TabItem>
     </TabArea>
   );
 }

@@ -18,7 +18,7 @@ import Api from '../../Api';
 
 import SignInput from '../../components/SignInput';
 
-import BarberLogo from '../../assets/barber.svg';
+import BarberIcon from '../../assets/barber';
 
 export default function SignIn() {
   const {dispatch: userDispatch} = useContext(UserContext);
@@ -60,6 +60,8 @@ export default function SignIn() {
 
   return (
     <Container>
+      <BarberIcon />
+
       <InputArea>
         <SignInput
           IconSvg={'EmailIcon'}

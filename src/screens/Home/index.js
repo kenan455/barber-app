@@ -21,8 +21,8 @@ import {
 
 import BarberItem from '../../components/BarberItem';
 
-import SearchIcon from '../../assets/search.svg';
-import MyLocationIcon from '../../assets/my_location.svg';
+import SearchIcon from '../../assets/searchIcon';
+import MyLocationIcon from '../../assets/myLocationIcon';
 
 export default function Home() {
   const navigation = useNavigation();
@@ -41,7 +41,7 @@ export default function Home() {
         : PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION,
     );
 
-    if (result == 'granted') {
+    if (result === 'granted') {
       setLoading(true);
       setLocationText('');
       setList([]);
@@ -65,7 +65,7 @@ export default function Home() {
     }
 
     let res = await Api.getBarbers(lat, lng, locationText);
-    if (res.error == '') {
+    if (res.error === '') {
       if (res.loc) {
         setLocationText(res.loc);
       }
@@ -103,7 +103,7 @@ export default function Home() {
             Encontre o seu barbeiro favorito
           </HeaderTitle>
           <SearchButton onPress={() => navigation.navigate('Search')}>
-            {/*  <SearchIcon width="26" height="26" fill="#FFFFFF" /> */}
+            <SearchIcon width="26" height="26" fill="#FFFFFF" />
           </SearchButton>
         </HeaderArea>
 
@@ -116,7 +116,7 @@ export default function Home() {
             onEndEditing={handleLocationSearch}
           />
           <LocationFinder onPress={handleLocationFinder}>
-            {/* <MyLocationIcon width="24" height="24" fill="#FFFFFF" /> */}
+            <MyLocationIcon width="24" height="24" fill="#FFFFFF" />
           </LocationFinder>
         </LocationArea>
 

@@ -1,9 +1,8 @@
 import React from 'react';
-import {Image} from 'react-native';
 import styled from 'styled-components/native';
 
-import EmailIcon from '../assets/email.svg';
-import LockIcon from '../assets/lock.svg';
+import EmailIcon from '../assets/emailIcon';
+import LockIcon from '../assets/lockIcon';
 
 const InputArea = styled.View`
   width: 100%;
@@ -31,7 +30,11 @@ export default function SignInput({
 }) {
   return (
     <InputArea>
-      {/*colocar icones  */}
+      {IconSvg === 'EmailIcon' ? (
+        <EmailIcon width="24" height="24" fill="#268596" />
+      ) : (
+        <LockIcon width="24" height="24" fill="#268596" />
+      )}
       <Input
         placeholder={placeholder}
         placeholderTextColor="#268596"

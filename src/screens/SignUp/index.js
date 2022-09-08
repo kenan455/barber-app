@@ -17,10 +17,10 @@ import SignInput from '../../components/SignInput';
 
 import Api from '../../Api';
 
-import BarberLogo from '../../assets/barber.svg';
-import PersonIcon from '../../assets/person.svg';
-import EmailIcon from '../../assets/email.svg';
-import LockIcon from '../../assets/lock.svg';
+import BarberIcon from '../../assets/barber';
+import PersonIcon from '../../assets/personIcon';
+import EmailIcon from '../../assets/emailIcon';
+import LockIcon from '../../assets/lockIcon';
 
 export default function SignUp() {
   const {dispatch: userDispatch} = useContext(UserContext);
@@ -31,7 +31,7 @@ export default function SignUp() {
   const [passwordField, setPasswordField] = useState('');
 
   const handleSignClick = async () => {
-    if (nameField != '' && emailField != '' && passwordField != '') {
+    if (nameField !== '' && emailField !== '' && passwordField !== '') {
       let res = await Api.signUp(nameField, emailField, passwordField);
 
       if (res.token) {
@@ -63,7 +63,7 @@ export default function SignUp() {
 
   return (
     <Container>
-      {/*  <BarberLogo width="100%" height="160" /> */}
+      <BarberIcon />
 
       <InputArea>
         <SignInput

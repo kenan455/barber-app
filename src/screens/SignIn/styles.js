@@ -9,7 +9,9 @@ export const Container = styled.SafeAreaView`
 `;
 export const InputArea = styled.View`
   width: 100%;
-  padding: 40px;
+  padding-top: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
 `;
 
 export const CustomButton = styled.TouchableOpacity`
@@ -27,7 +29,7 @@ export const CustomButtonText = styled.Text`
 export const SignMessageButton = styled.TouchableOpacity`
   flex-direction: row;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 20px;
 `;
 export const SignMessageButtonText = styled.Text`

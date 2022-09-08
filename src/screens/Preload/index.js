@@ -6,7 +6,7 @@ import {useNavigation} from '@react-navigation/native';
 import {UserContext} from '../../contexts/UserContext';
 import Api from '../../Api';
 
-import BarberLogo from '../../assets/barber.svg';
+import BarberIcon from '../../assets/barber';
 
 export default function Preload() {
   const {dispatch: userDispatch} = useContext(UserContext);
@@ -43,6 +43,7 @@ export default function Preload() {
 
   return (
     <Container>
+      <BarberIcon />
       <LoadingIcon size="large" color="#FFFFFF" />
     </Container>
   );
